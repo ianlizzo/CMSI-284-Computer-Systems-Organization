@@ -2,28 +2,28 @@
 #include <string.h>
 #include <stdlib.h>
 
-int allocatedSpaceForString(char* string) {
-    int allocatedSpace = 0;
+int allocated_space_for_string(char* string) {
+    int allocated_space = 0;
     int length = strlen(string);
     for (int i = 1; i <= length; i++) {
-        allocatedSpace += i;
+        allocated_space += i;
     }
-    return allocatedSpace;
+    return allocated_space;
 }
 
-char* silly(char *stringOne, char* stringTwo) {
-    int allocatedSpace = allocatedSpaceForString(stringOne) + allocatedSpaceForString(stringTwo);
-    char* finalString = malloc(allocatedSpace + 1);
-    finalString[0] = '\0';
-    int lengthOne = strlen(stringOne);
-    for (int i = 1; i <= lengthOne; i++) {
-        strncat(finalString, stringOne, i);
+char* silly(char* s1, char* s2) {
+    int allocated_space = allocated_space_for_string(s1) + allocated_space_for_string(s2);
+    char* final_string = malloc(allocated_space + 1);
+    final_string[0] = '\0';
+    int length_one = strlen(s1);
+    for (int i = 1; i <= length_one; i++) {
+        strncat(final_string, s1, i);
     }
-    int lengthTwo = strlen(stringTwo);
-    for (int i = 1; i <= lengthTwo; i++) {
-        strncat(finalString, stringTwo, i);
+    int length_two = strlen(s2);
+    for (int i = 1; i <= length_two; i++) {
+        strncat(final_string, s2, i);
     }
-    return finalString;
+    return final_string;
 }
 
 int main() {

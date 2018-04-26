@@ -7,12 +7,12 @@ int mod(int a, int b) {
     return (remainder < 0) ? remainder += b : remainder;
 }
 
-char* rotate(char* string, int startIndex) {
+char* rotate(char* string, int start_index) {
     int length = strlen(string);
-    char* finalString = malloc(length + 1);
+    char* final_string = malloc(length + 1);
     for (int i = 0; i < length; i++) {
-        finalString[i] = string[mod(startIndex + i, length)];
+        final_string[i] = string[mod(start_index + i, length)];
     }
-    finalString[length] = '\0';
-    return finalString;
+    final_string[length] = '\0';
+    return final_string;
 }
