@@ -7,4 +7,4 @@ Various programs from Loyola Marymount University’s CMSI 284 class, written in
 
 - rotate.c: a C function that takes in a string s and an int k and returns a newly allocated string which is the k-fold left rotation of s.
 
--utf8encoder: a C program that reads, from standard input, text encoded in UTF-32LE, and writes the corresponding UTF-8 to standard output.
+- utf32LE_encoder: a C program that reads, from standard input, text encoded in UTF-32LE, and writes the corresponding UTF-8 to standard output.
